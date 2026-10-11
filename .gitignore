@@ -1,0 +1,65 @@
+# Dependencies (this project ships with none, but keep them out if you add any)
+node_modules/
+jspm_packages/
+bower_components/
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build output and caches (the site itself needs no build step)
+dist/
+build/
+out/
+.cache/
+.parcel-cache/
+.astro/
+.next/
+.tmp/
+.temp/
+coverage/
+
+# Operating system cruft
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+Thumbs.db:encryptable
+desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+*.stackdump
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.code-workspace
+*.swp
+*.swo
+*~
+.project
+.settings/
+.classpath
+
+# Local tooling leftovers (dev server, headless browser profiles, throwaway checks)
+.devserver*
+.chrome-profile*/
+.chrome-*/
+.probe*
+.verify*
+
+# Not ignored on purpose:
+#   preview/  reference screenshots shipped with the README

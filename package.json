@@ -1,0 +1,15 @@
+{
+  "name": "biswarup-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Single-page 3D parallax portfolio built with plain HTML, CSS and JavaScript. No dependencies, no build step.",
+  "scripts": {
+    "dev": "node scripts/dev-server.js",
+    "start": "node scripts/dev-server.js",
+    "dev:open": "node scripts/dev-server.js --open"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

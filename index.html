@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Biswarup — Creative Front-End Developer</title>
+  <meta name="description" content="Portfolio of Biswarup, a creative front-end developer building fast, accessible and memorable interfaces with layered depth, motion and craft." />
+  <meta name="theme-color" content="#05060a" />
+  <meta name="color-scheme" content="dark light" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Biswarup — Creative Front-End Developer" />
+  <meta property="og:description" content="Interfaces with depth: a 3D parallax portfolio built with vanilla HTML, CSS and JavaScript." />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script>document.documentElement.classList.remove('no-js');</script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="Biswarup, back to top">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">Biswarup<span class="brand-dot">.</span></span>
+      </a>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+        <ul>
+          <li><a href="#about" data-nav>About</a></li>
+          <li><a href="#skills" data-nav>Skills</a></li>
+          <li><a href="#work" data-nav>Work</a></li>
+          <li><a href="#experience" data-nav>Experience</a></li>
+          <li><a href="#contact" data-nav>Contact</a></li>
+        </ul>
+        <div class="nav-foot">
+          <a class="btn btn-ghost btn-sm" href="#contact">Let us talk</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-pressed="true" aria-label="Switch to light theme">
+          <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><g stroke-linecap="round"><line x1="12" y1="2.4" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21.6"/><line x1="2.4" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21.6" y2="12"/><line x1="5.2" y1="5.2" x2="7" y2="7"/><line x1="17" y1="17" x2="18.8" y2="18.8"/><line x1="18.8" y1="5.2" x2="17" y2="7"/><line x1="7" y1="17" x2="5.2" y2="18.8"/></g></svg>
+          <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1Z"/></svg>
+        </button>
+
+        <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="primaryNav" aria-label="Open navigation menu">
+          <span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top" aria-labelledby="heroTitle">
+      <canvas class="hero-canvas" id="scene" aria-hidden="true"></canvas>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-glow" data-depth="0.06" aria-hidden="true"></div>
+
+      <div class="hero-layer" data-depth="0.14" aria-hidden="true">
+        <span class="orb orb-a"></span>
+        <span class="orb orb-b"></span>
+      </div>
+      <div class="hero-layer" data-depth="0.26" aria-hidden="true">
+        <span class="chip-3d chip-a">{ }</span>
+        <span class="chip-3d chip-b">&lt;/&gt;</span>
+      </div>
+      <div class="hero-layer" data-depth="0.4" aria-hidden="true">
+        <span class="cube-3d"><i class="face f1"></i><i class="face f2"></i><i class="face f3"></i><i class="face f4"></i><i class="face f5"></i><i class="face f6"></i></span>
+      </div>
+
+      <div class="shell hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow reveal" data-depth="0.08">Front-end engineer &middot; Interaction designer</p>
+          <h1 class="hero-title" id="heroTitle">
+            <span class="line reveal" data-depth="0.2">I build the web</span>
+            <span class="line grad reveal" data-depth="0.3">with depth.</span>
+          </h1>
+          <p class="hero-lede reveal" data-depth="0.12">
+            I am Biswarup, a creative front-end developer. I turn ideas into fast, accessible
+            interfaces that feel physical &mdash; layered, reactive and alive on every screen size.
+          </p>
+
+          <div class="hero-cta reveal" data-depth="0.1">
+            <a class="btn btn-primary magnetic" href="#work">
+              <span>View selected work</span>
+              <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12.5 5.5 19 12l-6.5 6.5"/></svg>
+            </a>
+            <a class="btn btn-ghost magnetic" href="#contact">Start a project</a>
+          </div>
+
+          <dl class="hero-stats reveal" data-depth="0.08">
+            <div><dt>Years building</dt><dd><span class="count" data-count="6">0</span>+</dd></div>
+            <div><dt>Projects shipped</dt><dd><span class="count" data-count="48">0</span>+</dd></div>
+            <div><dt>Lighthouse avg</dt><dd><span class="count" data-count="98">0</span></dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-portrait reveal" data-depth="0.34">
+          <div class="portrait-frame">
+            <div class="portrait-inner">
+              <div class="portrait-mesh" aria-hidden="true"></div>
+              <p class="portrait-caption">
+                <span class="pulse" aria-hidden="true"></span>
+                Available for select freelance work
+              </p>
+            </div>
+            <span class="frame-corner c1" aria-hidden="true"></span>
+            <span class="frame-corner c2" aria-hidden="true"></span>
+            <span class="frame-corner c3" aria-hidden="true"></span>
+            <span class="frame-corner c4" aria-hidden="true"></span>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-hint" href="#about" aria-label="Scroll to about section">
+        <span class="scroll-hint-text">Scroll</span>
+        <span class="scroll-track" aria-hidden="true"><i></i></span>
+      </a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about" aria-labelledby="aboutTitle">
+      <div class="shell">
+        <p class="section-kicker reveal">01 &mdash; About</p>
+
+        <div class="about-grid">
+          <div class="about-copy">
+            <h2 class="section-title reveal" id="aboutTitle">Design instincts, engineering discipline.</h2>
+            <p class="reveal">
+              I started out making tiny websites for friends and never stopped. Today I work across the
+              stack, but my centre of gravity is the front end: the point where design decisions become
+              milliseconds, layout and feel.
+            </p>
+            <p class="reveal">
+              My approach is simple. Prototype early, keep the platform close, and let motion explain
+              structure instead of decorating it. The result is interfaces that stay fast on a mid-range
+              phone and still feel crafted on a large display.
+            </p>
+
+            <ul class="about-points">
+              <li class="reveal"><span class="point-icon" aria-hidden="true">&#9670;</span> Performance budgets treated as a feature, not an afterthought.</li>
+              <li class="reveal"><span class="point-icon" aria-hidden="true">&#9670;</span> Accessible by default: keyboard paths, semantics and contrast.</li>
+              <li class="reveal"><span class="point-icon" aria-hidden="true">&#9670;</span> Design systems that teams can actually keep using.</li>
+            </ul>
+          </div>
+
+          <aside class="about-panel tilt reveal" aria-label="Quick facts">
+            <div class="about-panel-inner">
+              <h3 class="panel-title">Quick facts</h3>
+              <dl class="fact-list">
+                <div><dt>Based in</dt><dd>Kolkata, India &middot; remote friendly</dd></div>
+                <div><dt>Focus</dt><dd>Web experiences, design systems, motion</dd></div>
+                <div><dt>Core stack</dt><dd>JavaScript, TypeScript, CSS, React, WebGL basics</dd></div>
+                <div><dt>Working style</dt><dd>Small iterations, written specs, no surprises</dd></div>
+              </dl>
+              <a class="btn btn-ghost btn-sm" href="#contact">Download resume</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section section-alt" id="skills" aria-labelledby="skillsTitle">
+      <div class="shell">
+        <p class="section-kicker reveal">02 &mdash; Capabilities</p>
+        <h2 class="section-title reveal" id="skillsTitle">The toolkit behind the polish.</h2>
+        <p class="section-lede reveal">Six years of shipping has narrowed this down to the things I reach for daily.</p>
+
+        <div class="skills-grid">
+          <div class="skill-col reveal">
+            <h3 class="mini-title">Craft</h3>
+            <ul class="bars">
+              <li><span class="bar-label">HTML &amp; CSS architecture<i>95</i></span><span class="bar"><i style="--level:95%"></i></span></li>
+              <li><span class="bar-label">JavaScript / TypeScript<i>90</i></span><span class="bar"><i style="--level:90%"></i></span></li>
+              <li><span class="bar-label">Motion &amp; interaction design<i>86</i></span><span class="bar"><i style="--level:86%"></i></span></li>
+            </ul>
+          </div>
+          <div class="skill-col reveal">
+            <h3 class="mini-title">Platform</h3>
+            <ul class="bars">
+              <li><span class="bar-label">React &amp; component systems<i>88</i></span><span class="bar"><i style="--level:88%"></i></span></li>
+              <li><span class="bar-label">Performance &amp; Core Web Vitals<i>84</i></span><span class="bar"><i style="--level:84%"></i></span></li>
+              <li><span class="bar-label">Accessibility (WCAG 2.2)<i>82</i></span><span class="bar"><i style="--level:82%"></i></span></li>
+            </ul>
+          </div>
+          <div class="skill-col reveal">
+            <h3 class="mini-title">Practice</h3>
+            <ul class="chips">
+              <li>WebGL / Three.js</li>
+              <li>Design tokens</li>
+              <li>Node &amp; APIs</li>
+              <li>Testing</li>
+              <li>Figma handoff</li>
+              <li>CI/CD</li>
+              <li>Analytics</li>
+              <li>SEO</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section class="section" id="work" aria-labelledby="workTitle">
+      <div class="shell">
+        <p class="section-kicker reveal">03 &mdash; Selected work</p>
+        <h2 class="section-title reveal" id="workTitle">Projects with a point of view.</h2>
+        <p class="section-lede reveal">Four builds that show how I think about structure, speed and delight. Move your cursor over a card.</p>
+
+        <div class="work-grid" id="workGrid">
+          <article class="tilt-card reveal">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="card-media media-a" aria-hidden="true"><span class="media-mesh"></span></div>
+            <div class="card-body">
+              <p class="card-tag">Product &middot; 2026</p>
+              <h3 class="card-title">Lumen Analytics</h3>
+              <p class="card-text">A real-time dashboard that renders 60k data points without dropping a frame, built on a custom canvas renderer.</p>
+              <ul class="tag-list"><li>TypeScript</li><li>Canvas</li><li>Web Workers</li></ul>
+            </div>
+            <a class="card-arrow" href="#work" aria-label="View the Lumen Analytics case study">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+          </article>
+
+          <article class="tilt-card reveal">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="card-media media-b" aria-hidden="true"><span class="media-mesh"></span></div>
+            <div class="card-body">
+              <p class="card-tag">Commerce &middot; 2025</p>
+              <h3 class="card-title">Northfold Store</h3>
+              <p class="card-text">A headless storefront where every interaction is progressive: instant filters, optimistic cart and offline-ready browsing.</p>
+              <ul class="tag-list"><li>React</li><li>Edge caching</li><li>a11y</li></ul>
+            </div>
+            <a class="card-arrow" href="#work" aria-label="View the Northfold Store case study">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+          </article>
+
+          <article class="tilt-card reveal">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="card-media media-c" aria-hidden="true"><span class="media-mesh"></span></div>
+            <div class="card-body">
+              <p class="card-tag">Experiment &middot; 2025</p>
+              <h3 class="card-title">Parallax Engine</h3>
+              <p class="card-text">The tiny depth engine running on this page: pointer-aware layers, a particle field and a single animation loop.</p>
+              <ul class="tag-list"><li>Vanilla JS</li><li>WebGL-free</li><li>2.4 kB gzip</li></ul>
+            </div>
+            <a class="card-arrow" href="#work" aria-label="View the Parallax Engine case study">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+          </article>
+
+          <article class="tilt-card reveal">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="card-media media-d" aria-hidden="true"><span class="media-mesh"></span></div>
+            <div class="card-body">
+              <p class="card-tag">Design system &middot; 2024</p>
+              <h3 class="card-title">Atlas UI</h3>
+              <p class="card-text">A token-first component library that took a 40-person team from inconsistent screens to a shared visual language.</p>
+              <ul class="tag-list"><li>Tokens</li><li>Storybook</li><li>Docs</li></ul>
+            </div>
+            <a class="card-arrow" href="#work" aria-label="View the Atlas UI case study">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section section-alt" id="experience" aria-labelledby="experienceTitle">
+      <div class="shell">
+        <p class="section-kicker reveal">04 &mdash; Track record</p>
+        <h2 class="section-title reveal" id="experienceTitle">Where the hours went.</h2>
+
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <div class="timeline-card tilt">
+              <p class="timeline-when">2023 &mdash; Present</p>
+              <h3>Senior Front-End Developer <span>&middot; Studio Nord</span></h3>
+              <p>Lead the interface layer for data-heavy products, mentor two developers, and run the internal motion and accessibility reviews.</p>
+              <ul class="tag-list"><li>Design systems</li><li>Performance</li><li>Mentoring</li></ul>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <div class="timeline-card tilt">
+              <p class="timeline-when">2021 &mdash; 2023</p>
+              <h3>Front-End Developer <span>&middot; Kitework Labs</span></h3>
+              <p>Shipped an award-shortlisted marketing platform and cut median page weight by 62% through a render-path rewrite.</p>
+              <ul class="tag-list"><li>React</li><li>Animation</li><li>CMS</li></ul>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <div class="timeline-card tilt">
+              <p class="timeline-when">2020 &mdash; 2021</p>
+              <h3>UI Engineer <span>&middot; Freelance</span></h3>
+              <p>Partnered with small teams to turn rough ideas into launch-ready websites, handling design, build and deployment.</p>
+              <ul class="tag-list"><li>HTML/CSS</li><li>Brand sites</li><li>SEO</li></ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact" aria-labelledby="contactTitle">
+      <div class="shell contact-grid">
+        <div class="contact-copy">
+          <p class="section-kicker reveal">05 &mdash; Contact</p>
+          <h2 class="section-title reveal" id="contactTitle">Have something worth building?</h2>
+          <p class="reveal">
+            Tell me about the problem, the deadline and the people using it. I reply to every serious
+            enquiry within two working days.
+          </p>
+
+          <ul class="contact-list reveal">
+            <li>
+              <span class="contact-label">Email</span>
+              <a class="contact-value" href="mailto:hello@example.com" id="emailLink">hello@example.com</a>
+              <button class="copy-btn" type="button" id="copyEmail" data-copy="hello@example.com">Copy</button>
+            </li>
+            <li><span class="contact-label">Location</span><span class="contact-value">Kolkata, India &middot; GMT+5:30</span></li>
+            <li><span class="contact-label">Social</span>
+              <span class="socials">
+                <a href="#" rel="me">GitHub</a><a href="#" rel="me">LinkedIn</a><a href="#" rel="me">Dribbble</a>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form tilt reveal" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required placeholder="Ada Lovelace" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required placeholder="ada@example.com" />
+          </div>
+          <div class="field">
+            <label for="message">Project brief</label>
+            <textarea id="message" name="message" rows="4" required placeholder="What are we building, and when does it need to be live?"></textarea>
+          </div>
+          <button class="btn btn-primary btn-block magnetic" type="submit">
+            <span>Send message</span>
+            <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12.5 5.5 19 12l-6.5 6.5"/></svg>
+          </button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          <p class="form-note">This static form opens your mail client with the message prefilled.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>&copy; <span id="year">2026</span> Biswarup. Built by hand with HTML, CSS and vanilla JavaScript.</p>
+      <a class="to-top" href="#top">Back to top <span aria-hidden="true">&uarr;</span></a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
